@@ -1,0 +1,39 @@
+http://www.geeksengine.com/database/problem-solving/northwind-queries-part-2.php
+
+
+1.This query calculates sales price for each order after discount is applied?
+
+select 
+ordersdetails.OrderID,
+ordersdetails.ProductID,
+ordersdetails.UnitPrice,
+ordersdetails.Quantity,
+ordersdetails.Discount,
+[Products].ProductName,
+ROUND(ordersdetails.UnitPrice * ordersdetails.Quantity * (1-ordersdetails.Discount),1) AS SalesPrice
+from [Order Details] AS ordersdetails,Products
+where ordersdetails.ProductID=Products.ProductID
+Order by ordersdetails.OrderID;
+
+
+2.For each category, we get the list of products sold and the total sales amount. Note that, in the second query, the inner query for table c is to get sales for each product on each order.
+
+select Categories.CategoryID,Categories.CategoryName,Products.ProductName,sum([Order Details].UnitPrice*[Order Details].Quantity) 
+from Categories,Products,[Order Details]
+where Categories.CategoryID=Products.CategoryID
+group by Categories.CategoryID,Categories.CategoryName,Products.ProductName
+order by CategoryID
+
+3.Ten Most Expensive Products
+
+select TOP 10 ProductName  ,UnitPrice from Products
+ORDER BY UnitPrice desc;
+
+4.Products by Category
+
+select Categories.CategoryName,Products.ProductName,Products.QuantityPerUnit,Products.UnitsInStock,Products.Discontinued
+from Products,Categories
+where Categories.CategoryID=Products.CategoryID AND Products.Discontinued =0
+order by Categories.CategoryName
+
+

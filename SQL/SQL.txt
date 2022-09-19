@@ -1,0 +1,13 @@
+1.select orderid, sum(unitprice) as TotalPrice
+   from [Order Details]
+   group by orderid
+   order by TotalPrice desc
+
+2.Select OrderID,sum((UnitPrice-Discount)*Quantity)AS total from [Order Details]
+   group by OrderID
+   order by total desc;
+
+3.over all sales per country=select o.ShipCountry AS country,sum((od.UnitPrice-od.Discount)*od.Quantity)AS total  from Orders o,[Order Details] od
+   where o.OrderID=od.OrderID
+   Group by ShipCountry
+   order by country;
