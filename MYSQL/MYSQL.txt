@@ -1,0 +1,9 @@
+1. To display the unique record in the table
+select distinct emp_no,amount,from_date,to_date from salary
+    -> group by emp_no;
+
+2.To find the Age from the birthDate
+select birth_date , timestampdiff(year,birth_date, curdate())as age from employee;
+
+3.To find the Date different to the current date
+select datediff(curdate(),birth_date) from employee;
