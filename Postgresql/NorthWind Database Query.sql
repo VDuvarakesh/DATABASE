@@ -50,3 +50,14 @@ select c.category_id,c.category_name,round(sum((od.unit_price - od.discount) * o
 where (c.category_id=p.category_id And od.product_id=p.product_id)
 Group by c.category_name,c.category_id
 order by c.category_id;
+
+
+--Create a view in postgresql
+CREATE view sales_Employee As
+SELECT o.employee_id,e.first_name,round(sum(((od.unit_price)-(od.discount))*od.quantity)) AS total from order_details od,orders o,employees e
+where (od.order_id=o.order_id AND o.employee_id=e.employee_id)
+GROUP by o.employee_id,e.first_name
+order by Total desc;
+
+--how to drop a view in Postgresql
+DROP VIEW sales_Employee;
