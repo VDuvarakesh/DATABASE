@@ -28,7 +28,6 @@ CREATE TABLE customers (
     phone character varying(24),
     fax character varying(24)
 );
-
 CREATE TABLE employees (
     employee_id smallint NOT NULL,
     last_name character varying(20) NOT NULL,
