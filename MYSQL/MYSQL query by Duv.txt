@@ -7,5 +7,3 @@ select employee.*,salary.* from employee,salary where employee.emp_no=salary.emp
 select * from employee, salary where employee.emp_no=(select emp_no  from salary where amount=
 (select Max(amount) from salary)) &&salary.emp_no=(select emp_no  from salary where amount=
 (select Max(amount) from salary))&&salary.amount=(select Max(amount) from salary);
-
-
