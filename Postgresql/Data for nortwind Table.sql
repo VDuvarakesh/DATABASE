@@ -6,7 +6,6 @@ INSERT INTO categories VALUES (5, 'Grains/Cereals', 'Breads, crackers, pasta, an
 INSERT INTO categories VALUES (6, 'Meat/Poultry', 'Prepared meats', '\x');
 INSERT INTO categories VALUES (7, 'Produce', 'Dried fruit and bean curd', '\x');
 INSERT INTO categories VALUES (8, 'Seafood', 'Seaweed and fish', '\x');
-
 INSERT INTO customers VALUES ('ALFKI', 'Alfreds Futterkiste', 'Maria Anders', 'Sales Representative', 'Obere Str. 57', 'Berlin', NULL, '12209', 'Germany', '030-0074321', '030-0076545');
 INSERT INTO customers VALUES ('ANATR', 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Owner', 'Avda. de la Constitución 2222', 'México D.F.', NULL, '05021', 'Mexico', '(5) 555-4729', '(5) 555-3745');
 INSERT INTO customers VALUES ('ANTON', 'Antonio Moreno Taquería', 'Antonio Moreno', 'Owner', 'Mataderos  2312', 'México D.F.', NULL, '05023', 'Mexico', '(5) 555-3932', NULL);
