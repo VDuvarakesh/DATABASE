@@ -11,3 +11,4 @@
    where o.OrderID=od.OrderID
    Group by ShipCountry
    order by country;
+   
