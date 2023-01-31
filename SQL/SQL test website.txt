@@ -35,5 +35,3 @@ select Categories.CategoryName,Products.ProductName,Products.QuantityPerUnit,Pro
 from Products,Categories
 where Categories.CategoryID=Products.CategoryID AND Products.Discontinued =0
 order by Categories.CategoryName
-
-
