@@ -2,7 +2,6 @@
 -- 1.Write an SQL query to fetch the EmpId and FullName of all the employees working under Manager with id – ‘986’.
 select EmpId,FullName from EmployeeDetails
 where managerid=986;
-
 --2.Write an SQL query to fetch the different projects available from the EmployeeSalary table.
 Select DISTINCT(project) from employeesalary;
 
